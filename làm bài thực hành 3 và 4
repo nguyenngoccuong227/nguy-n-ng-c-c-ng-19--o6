@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <style>
+        /* Optional: Basic CSS to make it look a bit better and organized */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .section-header {
+            background-color: #eee;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            flex: 1;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            flex: 2;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group.radio-group label {
+            flex: 1;
+        }
+        .form-group.radio-group input {
+            flex: unset;
+        }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .radio-options-container {
+            display: flex;
+            flex: 2;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .checkbox-group label {
+            margin-right: 10px;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .form-actions .submit {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .form-actions .cancel {
+            background-color: #f44336;
+            color: white;
+        }
+        .caption-text {
+            color: #777;
+            font-size: 0.8em;
+            text-align: right;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+        .note-editor {
+            border: 1px solid #ccc;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        .note-editor textarea {
+            width: 100%;
+            border: none;
+            resize: none;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form action="#" method="post">
+
+        <div class="section-header">Basic Info</div>
+<div class="form-group">
+            <label for="employeeId">Employee ID</label>
+            <input type="text" id="employeeId" name="employeeId" value="9">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" value="Dodsworth">
+        </div>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" value="Anne">
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-options-container">
+                <div class="radio-option">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="female" name="gender" value="female" checked>
+                    <label for="female">Female</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="xxx" name="gender" value="xxx">
+                    <label for="xxx">XXX</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="zzz" name="gender" value="zzz">
+                    <label for="zzz">ZZZ</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" value="Sales Representative">
+        </div>
+        <div class="form-group">
+            <label for="suffix">Suffix</label>
+            <input type="text" id="suffix" name="suffix" value="Ms.">
+        </div>
+        <div class="form-group">
+            <label for="birthDate">BirthDate</label>
+            <input type="date" id="birthDate" name="birthDate" value="1969-07-02">
+        </div>
+        <div class="form-group">
+            <label for="hireDate">HireDate</label>
+            <input type="date" id="hireDate" name="hireDate" value="1994-11-15">
+        </div>
+        <div class="form-group">
+            <label for="ssn">SSN (if applicable)</label>
+            <input type="text" id="ssn" name="ssn">
+        </div>
+        <div class="form-group">
+            <label for="reportsTo">Reports To</label>
+            <input type="text" id="reportsTo" name="reportsTo" value="Buchanan">
+        </div>
+        
+        ---
+
+        <div class="section-header">Contact Info</div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" value="7 Houndstooth Rd.">
+        </div>
+        <div class="form-group">
+
+
+
+
+
+[23/09/2025 13:22:37] nguyễn ngọc cường: <!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2> BÀI TẬP 03 - HTML Table </h2>
+     <table border="1" cellspacing="0" cellpadding="5">
+      <tr>
+      <th rowspan="2" colspan="2"> Student</th>
+      <th colspan="4">Exam</th>
+      <th colspan="4"> 2nd Exam</th>
+      <th colspan="2" rowspan="2"> Final Grade</th>
+       </tr>
+       <tr>
+       <th>Q1</th><th>Q2</th><th>Q3</th> <th rowspan="2">Grade</th>
+       <th>Q1</th><th>Q2</th> <th>Q3</th><th rowspan="2">Grade</th>
+       </tr>
+       <tr>
+       <th>Code</th><th>Name</th><td>8</td> <td>7</td><td>5</td>
+       <td>6</td><td>7</td><td>8</td><th>NR</th><th>R</th>
+       </tr>
+       <tr>
+       <th>80549061</th><th>John</th><td>70%</td><td>100%</td>
+       <td>100%</td><td>17.6</td><td colspan="4"></td><td>17.6</td>
+       <td>18</td>
+       </tr>
+       <tr>
+       <th>80549062</th><th>Mary</th><td>10%</td><td>50%</td>
+       <td>50%</td><td>6.8</td><td>100%</td><td>100%</td>
+       <td>50%</td><td>16.5</td><td>16.5</td><td>17</td></tr>
+       <tr>
+       <th>80549063</th><th>Claire</th><td colspan="4"></td>
+       <td>50%</td><td>50%</td><td>50%</td><td>10.0</td>
+       <td>10.0</td><td>10.0</td>
+       </tr>
+  </body>
+ 
+  </html>
