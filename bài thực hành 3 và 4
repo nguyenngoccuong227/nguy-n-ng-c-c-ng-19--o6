@@ -1,0 +1,331 @@
+bài 3
+
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2> BÀI TẬP 03 - HTML Table </h2>
+     <table border="1" cellspacing="0" cellpadding="5">
+      <tr>
+      <th rowspan="2" colspan="2"> Student</th>
+      <th colspan="4">Exam</th>
+      <th colspan="4"> 2nd Exam</th>
+      <th colspan="2" rowspan="2"> Final Grade</th>
+       </tr>
+       <tr>
+       <th>Q1</th><th>Q2</th><th>Q3</th> <th rowspan="2">Grade</th>
+       <th>Q1</th><th>Q2</th> <th>Q3</th><th rowspan="2">Grade</th>
+       </tr>
+       <tr>
+       <th>Code</th><th>Name</th><td>8</td> <td>7</td><td>5</td>
+       <td>6</td><td>7</td><td>8</td><th>NR</th><th>R</th>
+       </tr>
+       <tr>
+       <th>80549061</th><th>John</th><td>70%</td><td>100%</td>
+       <td>100%</td><td>17.6</td><td colspan="4"></td><td>17.6</td>
+       <td>18</td>
+       </tr>
+       <tr>
+       <th>80549062</th><th>Mary</th><td>10%</td><td>50%</td>
+       <td>50%</td><td>6.8</td><td>100%</td><td>100%</td>
+       <td>50%</td><td>16.5</td><td>16.5</td><td>17</td></tr>
+       <tr>
+       <th>80549063</th><th>Claire</th><td colspan="4"></td>
+       <td>50%</td><td>50%</td><td>50%</td><td>10.0</td>
+       <td>10.0</td><td>10.0</td>
+       </tr>
+  </body>
+ 
+  </html>
+
+
+bài 4
+
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            width: 600px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
+        .section-header {
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .form-row label {
+            width: 150px; /* Cố định chiều rộng cho label */
+            margin-right: 10px;
+            text-align: right;
+            font-size: small;
+        }
+        .form-row input[type="text"], 
+        .form-row input[type="date"], 
+        .form-row select,
+        .form-row input[type="file"] {
+            flex-grow: 1;
+            padding: 3px;
+            border: 1px solid #999;
+        }
+        .form-row input[type="text"]:focus,
+        .form-row input[type="date"]:focus,
+        .form-row select:focus,
+        .form-row input[type="file"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #333;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .radio-group label, .checkbox-group label {
+            width: auto;
+            text-align: left;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+        .notes-area {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        .notes-toolbar {
+            /* Đây chỉ là mô phỏng, cần CSS phức tạp hơn cho toolbar thực tế */
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 5px;
+            height: 25px; 
+            background-color: #f0f0f0;
+        }
+        textarea {
+            width: 98%;
+            height: 80px;
+            border: none;
+            resize: none;
+            padding: 5px;
+        }
+        .captcha-row {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .captcha-row label {
+            width: 150px;
+            text-align: right;
+            margin-right: 10px;
+            font-size: small;
+        }
+        .captcha-box {
+            border: 1px solid #000;
+            padding: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            width: 100px;
+            text-align: center;
+            margin-right: 10px;
+        }
+        .footer-buttons {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+padding-top: 10px;
+            border-top: 1px solid #ccc;
+        }
+        .footer-buttons button {
+            padding: 5px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .required-note {
+            font-size: x-small;
+            color: gray;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    
+    <div class="section-header">Basic Info</div>
+    
+    <div class="form-row">
+        <label for="employeeID">Employee ID</label>
+        <input type="text" id="employeeID" value="9" readonly style="width: 50px;">
+    </div>
+    
+    <div class="form-row">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" value="Dodsworth">
+    </div>
+    
+    <div class="form-row">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" value="Anne">
+        <span style="margin-left: 5px; border: 1px solid #000; padding: 2px;">&#x2195;</span>
+    </div>
+    
+    <div class="form-row">
+        <label>Gender</label>
+        <div class="radio-group">
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" checked>
+            <label for="female">Female</label>
+            <input type="radio" id="zzz_gender" name="gender" value="ZZZ">
+            <label for="zzz_gender">ZZZ</label>
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <label for="title">Title</label>
+        <select id="title">
+            <option>Sales Representative</option>
+        </select>
+    </div>
+    
+    <div class="form-row">
+        <label for="suffix">Suffix</label>
+        <input type="text" id="suffix" value="Ms.">
+    </div>
+    
+    <div class="form-row">
+        <label for="birthDate">BirthDate</label>
+        <input type="date" id="birthDate" value="1969-07-02">
+        <span style="margin-left: 5px; font-size: small;">(7)</span>
+    </div>
+
+    <div class="form-row">
+        <label for="hireDate">HireDate</label>
+        <input type="date" id="hireDate" value="1994-11-15">
+    </div>
+
+    <div class="form-row">
+        <label for="ssn">SSN # (If applicable)</label>
+        <input type="text" id="ssn" value="">
+    </div>
+
+    <div class="form-row">
+        <label for="reportsTo">Reports To</label>
+        <select id="reportsTo">
+            <option>Buchanan</option>
+        </select>
+        <button style="margin-left: 5px; padding: 0 5px;">:</button>
+    </div>
+
+    <div class="section-header">Contact Info</div>
+
+    <div class="form-row">
+        <label for="email">Email</label>
+        <input type="text" id="email" value="name@example.com">
+    </div>
+
+    <div class="form-row">
+        <label for="address">Address</label>
+        <input type="text" id="address" value="7 Houndstooth Rd.">
+    </div>
+
+    <div class="form-row">
+        <label for="city">City</label>
+<input type="text" id="city" value="London">
+    </div>
+
+    <div class="form-row">
+        <label for="region">Region</label>
+        <input type="text" id="region" value="">
+    </div>
+
+    <div class="form-row">
+        <label for="postalCode">Postal Code</label>
+        <input type="text" id="postalCode" value="WG2 7LT">
+    </div>
+
+    <div class="form-row">
+        <label for="country">Country</label>
+        <select id="country">
+            <option>Russian Federation</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="usHomePhone">US Home Phone</label>
+        <input type="text" id="usHomePhone" value="(234)234-2342">
+    </div>
+
+    <div class="form-row">
+        <label for="photo">Photo</label>
+        <input type="file" id="photo" value="EmpID9.bmp">
+    </div>
+
+    <div class="section-header">Optional Info</div>
+
+    <div class="form-row" style="align-items: flex-start;">
+        <label for="notes">Notes</label>
+        <div class="notes-area" style="flex-grow: 1;">
+            <div class="notes-toolbar">
+                </div>
+            <textarea id="notes">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German ZZZ</textarea>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <label>Preferred Shift</label>
+        <div class="radio-group">
+            <input type="radio" id="regular" name="shift" value="Regular">
+            <label for="regular">Regular</label>
+            <input type="radio" id="gravyYard" name="shift" value="Gravy Yard">
+            <label for="gravyYard">Gravy Yard</label>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <label>Active?</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="active" checked>
+            <label for="active"></label>
+        </div>
+    </div>
+
+    <div class="captcha-row">
+        <label for="captcha">Are you human?</label>
+        <div class="captcha-box">TIDAWO</div>
+        <button style="padding: 3px 8px; font-size: small;">Click to change</button>
+    </div>
+
+    <div class="required-note">
+        * required
+    </div>
+
+    <div class="footer-buttons">
+        <button>&#x2713; Submit</button>
+        <button>&#x2715; Cancel</button>
+    </div>
+</div>
+
+</body>
+</html>
